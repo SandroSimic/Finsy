@@ -1,0 +1,66 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding: 0rem 10rem;
+
+  @media only screen and (max-width: $bp-medium-large) {
+    grid-template-columns: 1fr;
+    padding: 0rem 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest-small) {
+    padding: 0rem 2.5rem;
+  }
+}
+
+.features-section {
+  padding: 20rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 20rem 5rem;
+  }
+  h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 15rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.sponsor-section {
+  padding: 0rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-section {
+  padding: 20rem 10rem;
+  h1{
+    text-align: center;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+  }
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 20rem 0rem;
+}
+
+}

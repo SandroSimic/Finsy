@@ -1,0 +1,142 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  padding: 0 10rem;
+  animation-name: slideDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+
+  
+  @media only screen and (max-width: $bp-medium-small) {
+    padding: 0rem 2rem;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      display: none;
+    }
+  }
+
+  &__listItem {
+    position: relative;
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: var(--primary-color);
+      transition: 0.2s all ease-in;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+
+    
+    @media only screen and (max-width: $bp-medium-small) {
+      gap: 1rem;
+    }
+  }
+
+  &__responsive {
+    color: var(--color-dark);
+    overflow: hidden;
+    font-size: 2.5rem;
+    display: none;
+    @media only screen and (max-width: $bp-largest) {
+      display: flex;
+      transition: 0.2s all;
+      color: var(--primary-color);
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .logo {
+    color: var(--primary-color);
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
+  }
+}
+
+.responsive {
+  position: fixed;
+  background-color: var(--primary-color);
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation-name: slideLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    display: none;
+  }
+
+  &__button {
+    font-size: 3rem;
+    padding: 1rem;
+    align-self: flex-end;
+    color: black;
+  }
+
+  &__listItems {
+    height: 100%;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+
+    li {
+      position: relative;
+      font-weight: 300;
+      color: var(--color-dark);
+      &::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: var(--color-dark);
+
+        &:hover {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--close {
+    display: none;
+  }
+}

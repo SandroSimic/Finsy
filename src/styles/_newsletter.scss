@@ -1,0 +1,102 @@
+.newsletter {
+  background-color: var(--color-dark);
+  border-radius: 3rem;
+  padding: 5rem 10rem;
+
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 2rem 5rem;
+}
+
+@media only screen and (max-width: $bp-smallest) {
+    padding: 2rem 5rem;
+}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+        flex-direction: column;
+        gap: 5rem;
+        align-items: flex-start;
+
+    }
+  }
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__icon {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    display: flex;
+    align-self: baseline;
+    border-radius: 50rem;
+    font-size: 3rem;
+    justify-self: center;
+  }
+  &__text {
+    h2 {
+      color: var(--color-light-gray);
+      font-size: 6rem;
+      font-weight: 300;
+
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: $bp-large) {
+        font-size: 3rem;
+    }
+    }
+    p {
+      color: var(--color-gray);
+      font-size: 2rem;
+      font-weight: 300;
+      @media only screen and (max-width: $bp-large) {
+        font-size: 1.6rem;
+    }
+    }
+  }
+
+  .newsletter-btn {
+    box-shadow: none;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: black;
+      transform: scale(1.1);
+    }
+  }
+
+  &__inputText {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    input {
+      padding: 1.5rem;
+      border-radius: 3rem;
+      background-color: var(--color-dark);
+      border: 2px solid var(--color-gray);
+      color: var(--color-light-gray);
+    }
+
+    h3 {
+      color: var(--color-light-gray);
+      font-weight: 300;
+    }
+
+    p {
+      color: var(--color-gray);
+      font-weight: 300;
+
+      span {
+        color: var(--color-light-gray);
+        text-decoration: underline;
+      }
+      margin-bottom: 3rem;
+    }
+  }
+}
